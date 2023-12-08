@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css">
+    <title>SolarSystem</title>
+</head>
+
+<body>
+    <div class="container blur blur_activated">
+
+        <div class="neptune-orbit">
+            <div class="neptune">
+                <p>Neptuno</p>
+            </div>
+        </div>
+
+        <div class="uranus-orbit">
+            <div class="uranus">
+                <p>Urano</p>
+            </div>
+        </div>
+
+        <div class="saturn-orbit">
+            <div class="saturn">
+                <p>Saturno</p>
+            </div>
+        </div>
+
+        <div class="jupiter-orbit">
+            <div class="jupiter">
+                <p>Jupiter</p>
+            </div>
+        </div>
+
+        <div class="mars-orbit">
+            <div class="mars">
+                <p>Marte</p>
+            </div>
+        </div>
+
+        <div class="earth-orbit">
+            <div class="earth">
+                <div class="moon-orbit">
+                    <div class="moon">
+                        <p>La luna</p>
+                    </div>
+                </div>
+                <p>Tierra</p>
+            </div>
+        </div>
+
+        <div class="venus-orbit">
+            <div class="venus">
+                <p>Venus</p>
+            </div>
+        </div>
+
+        <div class="mercury-orbit">
+            <div class="mercury">
+                <p>Mercurio</p>
+            </div>
+        </div>
+
+        <div class="sun"></div>
+    </div>
+
+    <div class="welcomeMsg">
+        <h1>Bienvenido a Solar System Armstrong</h1>
+        <h3>Aqui podras divertirte con nuestros asombrosos cuestionarios y aprenderas todo lo relacionado al sistema solar</h3>
+        <h4>Nota: No te enfadez si no te funcion a la primera, no es una competecia.
+            Trata de pasarla bien disfrutar de la experiencia</h4>
+        <button class="UserNameAsign">Dejame entrar!</button>
+    </div>
+
+    <div class="logo">
+        <img src="Images\logo.png" alt="">
+        <h3>Solar System Armstrong</h3>
+    </div>
+
+    <button id="botonPregunta">Quizz</button>
+         <!-- Modal de selecciÃ³n -->
+    <div id="modalSeleccion">
+        <button class="botonSeleccion" onclick="mostrarPreguntas(1)">Sol </button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(2)">Mercurio</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(3)">Venus</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(4)">Tierra</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(5)">Marte</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(6)">Jupiter</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(7)">Saturno</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(8)">Urano</button>
+        <button class="botonSeleccion" onclick="mostrarPreguntas(9)">Neptuno</button>
+    </div>
+
+        <!-- Contenedor del modal de preguntas -->
+    <div id="miModal">
+        <!-- Encabezado del modal con una pregunta -->
+        <h2 id="pregunta"></h2>
+        <!-- Cuerpo del modal con opciones -->
+        <div class="opciones" id="opciones"></div>
+        <button id="cerrarModal">Cerrar</button>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content" id="modalContent">
+            <h1 id="planetName"></h1>
+            <h3 id="planetRadio"></h3>
+            <h3 id="planetTemperature"></h3>
+            <h3 id="planetDistance"></h3>
+            <h3 id="planetComposition"></h3>
+            <h3 id="planetRotation"></h3>
+            <h3 id="planetTranslation"></h3>
+            <h3 id="planetGravity"></h3>
+            <h3 id="planetSummary"></h3>
+            <video id="planetVideo" width="400" height="250" controls>
+                <source src="videos/mercurio.mp4" type="video/mp4">
+                <source src="videos/venus.mp4" type="video/mp4">
+                <source src="videos/tierra.mp4" type="video/mp4">
+                <source src="videos/marte.mp4" type="video/mp4">
+                <source src="videos/jupiter.mp4" type="video/mp4">
+                <source src="videos/saturno.mp4" type="video/mp4">
+                <source src="videos/urano.mp4" type="video/mp4">
+                <source src="videos/neptuno.mp4" type="video/mp4">
+                <source src="videos/luna.mp4" type="video/mp4">
+                <source src="videos/sol.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+    </div>
+
+    <button class="botonZoomIn">
+        <span class="material-symbols-outlined">
+            zoom_in
+        </span>
+    </button>
+    <button class="botonZoomOut">
+        <span class="material-symbols-outlined">
+            zoom_out
+        </span>
+    </button>
+</body>
+<script src="./main.js"></script>
+</html>

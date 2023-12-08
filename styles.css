@@ -1,0 +1,574 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./Images/space.png);
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.logo
+{
+    position: fixed;
+    height: 10vw;
+    width: 10vw;
+    bottom: 79%; /* Ajusta la posición vertical del botón "Alejar" */
+    right: 3%;
+    color: gray;
+    border: none;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+.logo img
+{
+    top: 20px;
+    left: 30px;
+    height: 9vw;
+    width: 12vw;
+}
+
+.logo h3
+{
+    position: fixed;
+    top: 15%;
+    right: 2.7%;
+
+    font-family: system-ui;
+    font-size: 10px;
+    margin: 1px;
+    align-items: top;
+}
+
+.welcomeMsg
+{
+    font-family: sans-serif;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    height: 250px;
+    width: 500px;
+    padding: 60px;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.UserNameAsign {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.UserNameAsign:hover {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.welcomeMsg.inactive
+{
+    top: 40%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.blur_activated
+{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.container
+{
+    position: relative;
+    font-size: 10px;
+    width: 1280px;
+    height: 720px;
+}
+
+.sun
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 125px;
+    height: 125px;
+    background-image: url(./Images/sun.png);
+    background-size: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.mercury
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(./Images/mercury.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 43%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    animation: mercury-orbit 10s linear infinite;
+    cursor: pointer;
+}
+
+.venus
+{
+    height: 40px;
+    width: 40px;
+    background-image: url(./Images/venus.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    animation: venus-orbit 30s linear infinite;
+    cursor: pointer;
+}
+
+.earth
+{
+    height: 50px;
+    width: 50px;
+    background-image: url(./Images/earth.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 41%;
+    top: 40%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    animation: earth-orbit 36.5s linear infinite;
+    cursor: pointer;
+}
+
+.moon
+{
+    height: 15px;
+    width: 15px;
+    background-image: url(./Images/moon.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 42%;
+    top: 42%;
+    z-index: 2;
+    animation: moon-orbit 5s linear infinite;
+    cursor: pointer;
+}
+
+.mars
+{
+    height: 30px;
+    width: 30px;
+    background-image: url(./Images/mars.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 47.5%;
+    top: 47.5%;
+    transform: translate(-50%, -50%);
+    animation: mars-orbit 45s linear infinite;
+    cursor: pointer;
+}
+
+.jupiter
+{
+    height: 100px;
+    width: 100px;
+    background-image: url(./Images/jupiter.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 44%; /* Ajusta la posición izquierda */
+    top: 44%; /* Ajusta la posición superior */
+    transform: translate(-50%, -50%);
+    animation: jupiter-orbit 50s linear infinite;
+    cursor: pointer;
+}
+
+.saturn
+{
+    height: 80px;
+    width: 80px;
+    background-image: url(./Images/saturn.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 47%; /* Ajusta la posición izquierda */
+    top: 47%; /* Ajusta la posición superior */
+    transform: translate(-50%, -50%);
+    animation: saturn-orbit 60s linear infinite;
+    cursor: pointer;
+}
+
+.uranus
+{
+    height: 70px;
+    width: 70px;
+    background-image: url(./Images/urans.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 48%; /* Ajusta la posición izquierda */
+    top: 48%; /* Ajusta la posición superior */
+    transform: translate(-50%, -50%);
+    animation: uranus-orbit 75s linear infinite;
+    cursor: pointer;
+}
+
+.neptune
+{
+    height: 60px;
+    width: 60px;
+    background-image: url(./Images/neptune.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 48.5%; /* Ajusta la posición izquierda */
+    top: 48.5%; /* Ajusta la posición superior */
+    transform: translate(-50%, -50%);
+    animation: neptune-orbit 90s linear infinite;
+    cursor: pointer;
+}
+
+.mercury-orbit, .venus-orbit, .earth-orbit, .mars-orbit, 
+.jupiter-orbit, .saturn-orbit, .uranus-orbit,.neptune-orbit
+{
+    border-radius: 50%;
+    border: 1px dotted #ddd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Orbita de los planetas: generaban la linea meteoritos(puntos)*/
+.mercury-orbit
+{
+    height: 140px;
+    width: 140px;
+}
+
+.venus-orbit
+{
+    height: 200px;
+    width: 200px;
+}
+
+.earth-orbit
+{
+    height: 300px;
+    width: 300px;
+}
+
+.mars-orbit
+{
+    height: 490px;
+    width: 490px;
+}
+
+.jupiter-orbit
+{
+    height: 800px;
+    width: 800px;
+}
+
+.saturn-orbit
+{
+    height: 1200px;
+    width: 1200px;
+}
+
+.uranus-orbit
+{
+    height: 1600px;
+    width: 1600px;
+}
+
+.neptune-orbit
+{
+    height: 2000px;
+    width: 2000px;
+}
+
+.moon-orbit
+{
+    height: 65px;
+    width: 65px;
+    border: 1px dotted #fff;
+    position: relative;
+    left: -8px;
+    top: -8px;
+    border-radius: 40px;
+}
+
+@keyframes mercury-orbit
+{
+    from
+    {
+        transform: rotate(0deg)translate(70px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg)translate(70px) rotate(-360deg);
+    }
+}
+
+@keyframes venus-orbit
+{
+    from
+    {
+        transform: rotate(0deg)translate(100px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg)translate(100px) rotate(-360deg);
+    }
+}
+
+@keyframes earth-orbit
+{
+    from
+    {
+        transform: rotate(0deg)translate(155px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg)translate(155px) rotate(-360deg);
+    }
+}
+
+@keyframes moon-orbit
+{
+    from
+    {
+        transform: rotate(0deg)translate(33px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg)translate(33px) rotate(-360deg);
+    }
+}
+
+@keyframes mars-orbit
+{
+    from
+    {
+        transform: rotate(0deg) translate(245px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg) translate(245px) rotate(-360deg);
+    }
+}
+
+@keyframes jupiter-orbit
+{
+    from
+    {
+        transform: rotate(0deg) translate(400px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg) translate(400px) rotate(-360deg);
+    }
+}
+
+@keyframes saturn-orbit
+{
+    from
+    {
+        transform: rotate(0deg) translate(600px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg) translate(600px) rotate(-360deg);
+    }
+}
+
+@keyframes uranus-orbit
+{
+    from
+    {
+        transform: rotate(0deg) translate(800px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg) translate(800px) rotate(-360deg);
+    }
+}
+
+@keyframes neptune-orbit
+{
+    from
+    {
+        transform: rotate(0deg) translate(1000px) rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg) translate(1000px) rotate(-360deg);
+    }
+}
+
+p
+{
+    color: white;
+    font-family: system-ui;
+    font-size: 10px;
+    position: absolute;
+    left: -42px;
+    top: -11px;
+}
+
+/* Estilos para el botón en la esquina superior izquierda */
+#botonPregunta 
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: white; 
+    color: gray;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Estilos para el modal de selección */
+#modalSeleccion 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+/* Estilos para los botones de selección */
+.botonSeleccion 
+{
+    background-color: white;
+    color: gray;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* Estilos para el modal */
+#miModal 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #000; 
+    color: #fff; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+/* Estilos para las opciones */
+.opciones 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    font-size: 12px;
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    text-align: left;
+}
+
+#planetName {
+    text-align: center;
+}
+
+/* Estilos para el botón "Acercar" */
+.botonZoomIn 
+{
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+    bottom: 5%;
+    right: 1%;
+    background-color: white;
+    color: gray;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Estilos para el botón "Alejar" */
+.botonZoomOut 
+{
+    position: fixed;
+    height: 5vw;
+    width: 5vw;
+    bottom: 16%; /* Ajusta la posición vertical del botón "Alejar" */
+    right: 1%;
+    background-color: white;
+    color: gray;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.material-symbols-outlined
+{
+    font-size: 3vw;
+}
