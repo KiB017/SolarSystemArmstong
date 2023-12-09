@@ -65,7 +65,7 @@ body
     transition: 0.5s;
 }
 
-.UserNameAsign {
+.enterBtn {
     background-color: #2ecc71;
     color: #fff;
     padding: 10px 20px;
@@ -76,7 +76,7 @@ body
     transition: background-color 0.3s, color 0.3s;
 }
 
-.UserNameAsign:hover {
+.enterBtn:hover {
     background-color: #27ae60;
     color: #fff;
 }
@@ -575,13 +575,9 @@ p
 
 @media (max-width: 720px)
 {
+
     .welcomeMsg
     {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
         height: 400px;
         width: 250px;
         padding: 25px;
@@ -589,5 +585,27 @@ p
     .welcomeMsg h1
     {
         margin: 10px 0px;
+    }
+
+    .botonZoomIn, .botonZoomOut
+    {
+        right: 3%;
+        height: 15vw;
+        width: 15vw;
+    }
+
+    .botonZoomOut
+    {
+        bottom: 3%;
+    }
+
+    .botonZoomIn
+    {
+        bottom: 14%;
+    }
+
+    .material-symbols-outlined
+    {
+        font-size: 10vw;
     }
 }

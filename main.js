@@ -1,6 +1,6 @@
 const contenedor = document.querySelector(".container");
 const blur = document.querySelector(".blur");
-const userNameBtn = document.querySelector(".UserNameAsign");
+const enterBtn = document.querySelector(".enterBtn");
 const welcomeMsg = document.querySelector(".welcomeMsg");
 
 const botonPregunta = document.getElementById('botonPregunta');
@@ -143,7 +143,7 @@ const planetas = {
 };
 
 document.addEventListener("DOMContentLoaded", zoomFunction);
-userNameBtn.addEventListener("click", blurToggle);
+enterBtn.addEventListener("click", blurToggle);
 
 function zoomFunction() {
   const contenedor = document.querySelector(".container");
