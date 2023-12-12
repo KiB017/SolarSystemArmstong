@@ -362,7 +362,7 @@ function displayPlanetInfo(planeta) {
     document.getElementById("planetGravity").textContent = "Gravedad: " + planeta.gravity;
     document.getElementById("planetSummary").textContent = "" + planeta.summary;
 
-    document.getElementById("planetVideo").src = planeta.imgSource;
+    document.getElementById("planetImg").src = planeta.imgSource;
 
     const modal = document.getElementById("myModal");
     modal.style.display = "flex";
@@ -376,15 +376,10 @@ function displayPlanetInfo(planeta) {
 
   // Manejar cambios de pantalla completa
   const planetImg = document.getElementById('planetImg');
+
   document.addEventListener('fullscreenchange', function () {
-      if (document.fullscreenElement) {
-          // Entrando en pantalla completa
-          planetImg.style.width = '100%';
-          modalContent.style.width = '100%';
-      } else {
-          // Saliendo de pantalla completa
-          planetImg.style.width = '400px';
-          modalContent.style.width = '400px';
-      }
+    // Saliendo de pantalla completa
+    planetImg.style.width = '400px';
+    modalContent.style.width = '400px';
   });
 }
