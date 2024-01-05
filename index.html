@@ -1123,7 +1123,7 @@
     // Función para mostrar el modal de selección
     function mostrarModalSeleccion() 
     {
-    modalSeleccion.style.display = 'block';
+        modalSeleccion.style.display = 'block';
     }
     
     // Función para mostrar preguntas según la categoría seleccionada
@@ -1192,8 +1192,6 @@
         document.getElementById("planetGravity").textContent = "Gravedad: " + planeta.gravity;
         document.getElementById("planetSummary").textContent = "" + planeta.summary;
 
-        document.getElementById("planetVideo").src = planeta.videoSource;
-
         const modal = document.getElementById("myModal");
         modal.style.display = "flex";
 
@@ -1204,22 +1202,6 @@
                 modal.style.display = "none";
             }
         };
-
-        // Manejar cambios de pantalla completa
-        const planetVideo = document.getElementById('planetVideo');
-        document.addEventListener('fullscreenchange', function () {
-            if (document.fullscreenElement) 
-            {
-                // Entrando en pantalla completa
-                planetVideo.style.width = '100%';
-                modalContent.style.width = '100%';
-            } else 
-            {
-                // Saliendo de pantalla completa
-                planetVideo.style.width = '400px';
-                modalContent.style.width = '400px';
-            }
-        });
     }
 </script>
 </html>
